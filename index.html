@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Chat</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="css/stile.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Vallaurilogo.png">
+    </header>
+    <main>
+        <aside>
+            <ul id="listUtenti">
+                <li>
+                    <div class="material-symbols-outlined icone">
+                        face
+                    </div>
+                    Mario R.
+                </li>
+                <li>
+                    <div class="material-symbols-outlined icone">
+                        face_3
+                    </div>
+                    Maria B.
+                </li>
+            </ul>
+        </aside>
+        <section>
+            <header>
+                <!-- Nome dell'utente e data/ora ultimo messaggio -->
+                <div class="material-symbols-outlined icone">
+                    face
+                </div>
+                <div>
+                    <div id="divNome">Mario Rossi</div>
+                    <div id="divUltimoMes">Oggi alle 9:45</div>
+                </div>
+                
+            </header>
+            <section>
+                <!-- Messaggi degli utenti -->
+                <article class="mes ut1">Ciao &#128512</article>
+                <article class="mes ut2">Ciao</article>
+            </section>
+            <div id="divAddMes">
+                <input type="text">
+                <button>
+                    <span class="material-symbols-outlined icone">
+                    send
+                    </span>
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

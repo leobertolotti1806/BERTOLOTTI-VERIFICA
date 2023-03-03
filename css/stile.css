@@ -1,0 +1,142 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EBF4FC;
+}
+
+header{
+    width: 500px;
+    height: 18vh;
+    background-color: #5788B5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0px 0px;
+}
+
+header>img{
+    width: 200px;
+    height: 80%;
+}
+
+main{
+    width: 500px;
+    height: 78vh;
+
+    display: flex;
+    border-radius: 0px 0px 20px 20px;
+
+    background-color: red;
+}
+
+aside{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    background-color: #C0CFF0;
+    border-radius: 0px 0px 0px 20px;
+}
+
+aside>ul{
+    list-style-type: none;
+    margin:0px;
+    padding: 0px;
+    width: fit-content;
+}
+
+aside>ul>li{
+    margin-top:10px;
+}
+
+aside .icone{
+    font-size: 40pt;
+    display: block;
+}
+
+section{
+    width: 80%;
+    height: 100%;
+    border-radius: 0px 0px 20px 0px;
+    background-color:violet;
+}
+
+section>header{
+    width: 100%;
+    height: 20%;
+    border-radius: 0px;
+    background-color: #E3ECF4;
+
+    display: flex;
+    justify-content: left;
+}
+
+section>header .icone{
+    font-size: 55pt;
+    display: block;
+}
+
+#divUltimoMes{
+    color:grey;
+}
+
+section>section{
+    width: 100%;
+    height: 71%;
+    margin:0px;
+    border-radius: 0px 0px 20px 0px;
+    background-color: #DFE8F0;
+    overflow-y:scroll;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mes{
+    width: 90%;
+    padding: 10px;
+    margin-top:10px;
+    font-size: 20pt;
+}
+
+.ut1{
+    background-color: white;
+    border-radius: 10px 10px 10px 0px;
+}
+
+.ut2{
+    background-color: black;
+    color:white;
+    border-radius: 10px 10px 0px 10px;
+}
+
+#divAddMes{
+    width: 100%;
+    height: 9%;
+    margin:0px;
+    border-radius: 0px 0px 20px 0px;
+    background-color: #DFE8F0;
+
+    /* Importante per risolvere alcuni problemi di spazio con input type=text*/
+    display: flex; 
+}
+
+#divAddMes > input{
+    box-sizing: border-box;
+    height: 90%;
+    width: 80%;
+}
+
+#divAddMes > button{
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#divAddMes .icone{
+    font-size: 30pt;
+}
