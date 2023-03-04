@@ -83,28 +83,37 @@ var messaggi = [
 ];
 
 var nomeUtenti = [
-    "Ut",
-    "Mario",
-    "Maria",
-    "Elena",
-    "Ginevra",
-    "Luigi"
+    "Ut",   //0
+    "Mario",//1
+    "Maria",//2
+    "Elena",//3
+    "Ginevra",//4
+    "Luigi" //5
 ];
 
+var accesso = [
+    "10:54",
+    "17:22",
+    "0:44",
+    "16:30",
+    "20:10",
+    "7:02"
+]
+
 var cognomeUtenti = [
-    "Login",
-    "Rossi",
-    "Bianchi",
-    "Strada",
-    "Fiore",
-    "Silente"
+    "Login", //0
+    "Rossi", //1
+    "Bianchi", //2
+    "Strada", //3
+    "Fiore", //4
+    "Silente" //5
 ];
 
 var genereUt = [
-    "m",
-    "m",
-    "f",
-    "f",
-    "f",
-    "m"
+    "m", //0
+    "m", //1
+    "f", //2
+    "f", //3
+    "f", //4
+    "m" //5
 ];

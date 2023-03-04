@@ -20,3 +20,98 @@
         #se il campo di testo non è vuoto aggiungere il messaggio in coda agli altri del personaggio selezionato
 
 */
+
+
+let listUser = document.querySelector("aside > ul");
+let header = document.querySelector("section > header");
+let section = document.querySelector("section > section");
+
+
+listUser.innerHTML = "";
+
+for (let i = 1; i < nomeUtenti.length; i++) {
+    
+    //  CARICAMENTO ASIDE
+    let li = document.createElement("li");
+    let div = document.createElement("div");
+    div.classList.add("material-symbols-outlined", "icone");
+
+    if (genereUt[i] == "m")
+        div.textContent = "face";
+    else
+        div.textContent = "face_3";
+
+    li.appendChild(div);
+    li.innerHTML += nomeUtenti[i] + " " + cognomeUtenti[i][0] + ".";
+    listUser.appendChild(li);
+
+    li.addEventListener("click", function () {
+        //click di un utente
+
+        let face = header.querySelector("div");
+        let userName = document.getElementById("divNome");
+        let ultimoAccesso = document.getElementById("divUltimoMes");
+
+        if (genereUt[i] == "m")
+            face.textContent = "face_3";
+        else
+            face.textContent = "face";
+
+        userName.textContent = nomeUtenti[i] + " " + cognomeUtenti[i];
+        ultimoAccesso.textContent = "oggi alle " + accesso[i];
+
+
+        /*
+           MESSAGGI IN NERO SONO QUELLI INVIATI DALL'UTENTE
+           QUELLI IN BIANCO SONO QUELLI RICEVUTI DALL'UTENTE
+        */
+
+        //classe ut1 ==> BIANCO - RICEVUTI
+        //classe ut2 ==> NERI - INVIATI
+
+        //  creazione messaggi
+        let numeroMess = 0, offset = 0;
+
+        //trova messaggio
+        do
+            offset++;
+        while (mittenti[offset] != i && destinatari[offset] != i);
+
+        //trova quanti messaggi stampare
+        do
+            numeroMess++;
+        while (mittenti[offset + numeroMess] <= i && destinatari[offset + numeroMess] <= i);
+
+
+        section.innerHTML = "";
+
+        for (let j = 0; j < numeroMess; j++) {
+
+            let article = document.createElement("article");
+            article.classList.add("mes");
+
+            if (mittenti[j] == 0)
+                article.classList.add("ut1");
+            else
+                article.classList.add("ut2");
+
+            article.innerHTML = messaggi[offset + j];
+
+            section.appendChild(article);
+        }
+
+    });
+
+}
+
+let input = document.querySelector("input");
+input.addEventListener("change", function () {
+
+    let article = document.createElement("article");
+
+    article.classList.add("mes", "ut2");
+
+    article.innerHTML = this.value;
+
+    section.appendChild(article);
+});
